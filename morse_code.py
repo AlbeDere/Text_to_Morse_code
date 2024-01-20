@@ -16,6 +16,9 @@ def convert_to_morse_code():
     for char in input_text.upper():
         if char in morse_code_dict:
             morse_code_list.append(morse_code_dict[char])
+        # If space add '/'
+        elif char == " ":
+            morse_code_list.append("/")
         # If the character is not found add it to error message
         else:
             error_message += f"Error: No Morse code for character '{char}'.\n"
